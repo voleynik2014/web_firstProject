@@ -24,7 +24,7 @@ footer {
 
 .panel-body img{
 	width: 200px;
-	height: 250px
+	height: 250px;
 }
 
 .navbar-nav {
@@ -37,3 +37,7 @@ footer {
 .navbar-nav li:hover {
 	background-color: #afb4bc;
 }
+
+  .affix {
+      top: 20px;
+  }
