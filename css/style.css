@@ -1,7 +1,3 @@
-.navbar-nav {
-	display: flex;
-
-}
 
 .footer .navbar-inner {
 	height: 30px;
@@ -13,5 +9,31 @@
 	text-align: center;
 	border: 1px solid black;
 	border-radius: 10px;
-/*	box-shadow: 2px 2px 2px 2px black;*/
+}
+
+.jumbotron {
+		height: 200px;
+/*		float: none;
+		vertical-align: center;*/
+}
+
+footer {
+	  background-color: #f2f2f2;
+      padding: 25px;
+}
+
+.panel-body img{
+	width: 200px;
+	height: 250px
+}
+
+.navbar-nav {
+	display: flex;
+	justify-content: space-around;
+	float: none;
+	text-align: center;
+}
+
+.navbar-nav li:hover {
+	background-color: #afb4bc;
 }
