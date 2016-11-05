@@ -1,0 +1,45 @@
+
+.footer .navbar-inner {
+	height: 30px;
+	background-color: black;
+	color: white;
+}
+
+.menu 
+{
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+.jumbotron {
+		height: 200px;
+/*		float: none;
+		vertical-align: center;*/
+}
+
+footer {
+	  background-color: #f2f2f2;
+      padding: 25px;
+}
+
+.panel-body img{
+	width: 200px;
+	height: 250px;
+}
+
+.navbar-nav,
+#sign {
+	display: flex;
+	justify-content: space-around;
+	float: none;
+	text-align: center;
+}
+
+.navbar-nav li:hover {
+	background-color: #afb4bc;
+}
+
+  .affix {
+      top: 20px;
+  }
