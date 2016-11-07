@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Шиномонтаж, Автозапчасти, шины новые, б/у, диски, под заказ, Киев, Левобережная, дешев о, цены, купить">
+	<meta name="description" content="Шиномонтаж, Автозапчасти, шины новые, б/у, диски, под заказ, Киев, Левобережная, дешево, цены, купить">
 	<title>ShinaServis</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
@@ -11,210 +11,93 @@
 	// <script type="text/javascript" src="js/jquery.min.js"></script> -->
 </head>
 <body>
-
-  <nav class="navbar navbar-default navbar-fixed-top col-md-8" role="navigation" id="admin_menu_header">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar">Добавить товар</span>
-          <span class="icon-bar">Добавить Категорию</span>
-          <span class="icon-bar">Експорт</span>
-        </button>
-        <div class="block">
-          <a class="navbar-brand" href="#">ShinoServis</a>
-          <a class="navbar-brand" name="submit" href="#">Выйти</a>
-            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo">Добавить товар</button>
-  <div id="demo" class="collapse">
-      <div class="container ">
-    <div class="row">
-<!--       <div class="col-sm-9 col-sm-offset-3 col-md-8 main admin_main"> -->
-        <h1 class="page-header">Панель управления</h1>
-<!--         <div class="col-sm-12 col-md-12"> -->
-          <div class="col-sm-12 col-md-6">
-            <form enctype="multipart/form-data" method="post">
-              <div class="form-group" id="admin_form">
-                <div class="col-sm-12 col-md-8">
-                  <label for="item_name">Наименование</label>
-                  <input type="text" class="form-control" id="item_name">
-                  <label for="item_category">Категория:</label>
-                  <select class="form-control" id="item_category">
-                    <option id="1">Шины б\у</option>
-                    <option id="2">Щины новые</option>
-                    <option id="3">Автозапчасти</option>
-                  </select>
-                  <label for="Description">Описание</label>
-                  <textarea class="form-control" rows="5" id="Description"></textarea>
-
-                </div>
-                <div class="col-sm-8 col-md-4" id="season_radio">
-                  <div class="row">
-                    <label class="radio-inline"><input type="radio" name="optradio">Лето</label>
-                    <label class="radio-inline"><input type="radio" name="optradio" checked>Зима</label>
-                    <label class="radio-inline"><input type="radio" name="optradio">В/С</label>
-                  </div>
-                  <div class="row">
-                    <label class="radio-inline"><input type="radio" name="secradio" checked>В наличии</label>
-                    <label class="radio-inline"><input type="radio" name="secradio">Под заказ</label>
-                  </div>
-                  <div class="row">
-                    <label for="image_download" class="lab_img">Изображение</label>
-                    <input class="col-sm-12 "type="file" name="upload" id="image_download" multiple accept="image/*,image/jpeg">
-                  </div>
-                  <div class="c_item_param">
-                    <label for="item_param">Размер:</label>
-                    <div class="row">
-                      <input class="col-sm-8 col-md-4" type="number" name="width_param" min="100" max="500" step="5" id="item_param">
-                      <input class="col-sm-8 col-md-4" type="number" name="height_param" min="10" max="99" id="item_param" step="5">
-                      <input class="col-sm-8 col-md-4" type="number" name="radius_param" min="10" max="30" id="item_param">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <div class="col-sm-12 col-md-8">
-              <div class="row pull-right">
-                <input type="submit" value="Загрузить" class="form_download">
-              </div>
-            </div>
-        </form>
-      </div>
-<!--     </div> -->
-<!--   </div> -->
-</div>
-</div>
-  </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-	<div class="jumbotron">
-		<div class="container text-center">
-			<h1>Online Store</h1>
-			<p>Шины, Диски и тд...</p>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 headar-menu">
-				<nav class="navbar navbar-default">
-					<div class="navbar-header">
-						<a class="navbar-brand" href="#">WebSiteName</a>
-					</div>
-					<ul class="nav navbar-nav" role="tablist">
-						<li class=""><a href="#">Шиномонтаж</a></li>
-						<li class=""><a href="#">Шины Б/У</a></li>
-						<li class=""><a href="#">Шины Новые</a></li>
-						<li class=""><a href="#">Автозапчасти</a></li>
-						<li class=""><a href="#">Контакты</a></li>
-					</ul>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="admin_menu_header">
+		<div class="container">
+			<div class="row">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">ShinoServis</a>
 				</div>
-			</nav>
-		</div>
-	</div>
-
-	<div class="container" id="main">
-		<div class="row">
-			<div class="col-md-2 menu">
-				<h3>Меню</h3>
-				<ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
-					<li class="active"><a href="#">Шиномонтаж</a></li>
-					<li><a href="#">Шины Б/У</a></li>
-					<li><a href="#">Шины Новые</a></li>
-					<li><a href="#">Автозапчасти</a></li>
-					<li><a href="#">Контакты</a></li>
+				<ul class="nav navbar-nav">
+					<li><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Добавить товар</button></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Выйти</a></li>
 				</ul>
 			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-10 content-body">
-						<div class="row">
-							<div class="col-md-3">
-								<div class="panel panel-primary">
-									<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
-									<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
-									<div class="panel-footer">Краткое описание</div>
-								</div>
-							</div>
-
-							<div class="col-md-3">
-								<div class="panel panel-primary">
-									<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
-									<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
-									<div class="panel-footer">Краткое описание</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="panel panel-primary">
-									<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
-									<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
-									<div class="panel-footer">Краткое описание</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="panel panel-primary">
-									<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
-									<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
-									<div class="panel-footer">Краткое описание</div>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-3">
-								<div class="panel panel-primary">
-									<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
-									<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
-									<div class="panel-footer">Краткое описание</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="panel panel-primary">
-									<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
-									<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
-									<div class="panel-footer">Краткое описание</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="panel panel-primary">
-									<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
-									<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
-									<div class="panel-footer">Краткое описание</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="panel panel-primary">
-									<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
-									<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
-									<div class="panel-footer">Краткое описание</div>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-3">
-								<div class="panel panel-primary">
-									<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
-									<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
-									<div class="panel-footer">Краткое описание</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="panel panel-primary">
-									<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
-									<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
-									<div class="panel-footer">Краткое описание</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="panel panel-primary">
-									<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
-									<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
-									<div class="panel-footer">Краткое описание</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="panel panel-primary">
-									<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
-									<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
-									<div class="panel-footer">Краткое описание</div>
+		</nav>
+		<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Добавить товар</h4>
+					</div>
+					<div class="modal-body no-gutter">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-sm-12 col-md-12 text-center no-gutter" id="admin_panel" >
+									<form enctype="multipart/form-data" method="post">
+										<div class="form-group no-gutter">
+											<div class="col-sm-12 col-md-4 colum no-gutter">
+												<div class="border">
+													<label for="item_name">Наименование</label>
+													<input type="text" class="form-control" id="item_name">
+												</div>
+												<div class="border2">
+													<label for="Description">Описание</label>
+													<textarea style="resize: none;" class="form-control" rows="3" id="Description"></textarea>
+												</div>
+											</div>
+											<div class="col-sm-8 col-md-2 colum no-gutter" id="season_radio">
+												<div class="col-sm-8 col-md-12 border">
+													<label for="item_category">Категория:</label>
+													<select class="form-control" id="item_category">
+														<option id="1">Шины б\у</option>
+														<option id="2">Щины новые</option>
+														<option id="3">Автозапчасти</option>
+													</select>
+												</div>
+												<div class="c_item_param col-sm-8 col-md-12 border2">
+													<label for="item_param">Размер:</label>
+													<input class="col-sm-8 col-md-12" type="number" name="width_param" min="100" max="500" step="5" id="item_param">
+													<input class="col-sm-8 col-md-12" type="number" name="height_param" min="60" max="99" id="item_param" step="5">
+													<input class="col-sm-8 col-md-12" type="number" name="radius_param" min="10" max="30" id="item_param">
+												</div>
+											</div>
+											<div class="col-sm-8 col-md-3 colum">
+												<div class="border">
+													<label>Сезон:</label>
+													<div>
+														<label class="radio-input"><input type="radio" name="summer_radio">Лето</label>
+														<label class="radio-input"><input type="radio" name="winter_radio" checked>Зима</label>
+														<label class="radio-input"><input type="radio" name="semi_radio">В/С</label>
+													</div>
+												</div>
+												<div class="border2">
+													<label>Наличие:</label>
+													<div>
+														<label class="radio"><input type="radio" name="secradio" checked>В наличии</label>
+														<label class="radio"><input type="radio" name="secradio">Под заказ</label>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-8 col-md-2 colum">
+												<div class="border">
+													<label for="image_download" class="lab_img">Изображение</label>
+													<div class="img_upload">
+														<input type="file" name="upload" id="image_download" multiple accept="image/*,image/jpeg">
+													</div>
+												</div>
+												<div class="border2">
+													<label for="item_price">Цена:</label>
+													<div class="">
+														<input class="form-control" type="text" name="item_price" id="item_price">
+													</div>
+													<input type="submit" value="Добавить товар" class="btn btn-success" style="margin-top: 10px;">
+												</div>
+											</div>
+										</div>
+									</form>
 								</div>
 							</div>
 						</div>
@@ -222,13 +105,145 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<br><br>
-
-	<footer class="container-fluid text-center">
-		<p>Интернет магазин, права какието</p>
-	</footer>
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</body>
-</html>
+		<div class="jumbotron">
+			<div class="container text-center">
+				<h1>Online Store</h1>
+				<p>Шины, Диски и тд...</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 header-menu">
+					<nav class="navbar navbar-default">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="#">WebSiteName</a>
+						</div>
+						<ul class="nav navbar-nav" role="tablist">
+							<li class=""><a href="#">Шиномонтаж</a></li>
+							<li class=""><a href="#">Шины Б/У</a></li>
+							<li class=""><a href="#">Шины Новые</a></li>
+							<li class=""><a href="#">Автозапчасти</a></li>
+							<li class=""><a href="#">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="container" id="main">
+			<div class="row">
+				<div class="col-md-2 menu">
+					<ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+						<h3>Меню</h3>
+						<li class="active"><a href="#">Шиномонтаж</a></li>
+						<li><a href="#">Шины Б/У</a></li>
+						<li><a href="#">Шины Новые</a></li>
+						<li><a href="#">Автозапчасти</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-10 content-body">
+							<div class="row">
+								<div class="col-md-3">
+									<div class="panel panel-primary">
+										<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
+										<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
+										<div class="panel-footer">Краткое описание</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="panel panel-primary">
+										<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
+										<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
+										<div class="panel-footer">Краткое описание</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="panel panel-primary">
+										<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
+										<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
+										<div class="panel-footer">Краткое описание</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="panel panel-primary">
+										<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
+										<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
+										<div class="panel-footer">Краткое описание</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<div class="panel panel-primary">
+										<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
+										<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
+										<div class="panel-footer">Краткое описание</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="panel panel-primary">
+										<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
+										<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
+										<div class="panel-footer">Краткое описание</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="panel panel-primary">
+										<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
+										<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
+										<div class="panel-footer">Краткое описание</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="panel panel-primary">
+										<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
+										<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
+										<div class="panel-footer">Краткое описание</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<div class="panel panel-primary">
+										<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
+										<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
+										<div class="panel-footer">Краткое описание</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="panel panel-primary">
+										<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
+										<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
+										<div class="panel-footer">Краткое описание</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="panel panel-primary">
+										<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
+										<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
+										<div class="panel-footer">Краткое описание</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="panel panel-primary">
+										<div class="panel-heading">Мишелин 195/65 р15 б/у</div>
+										<div class="panel-body"><img src="img/def-tire.jpg" class="img-responsive" alt="Image"></div>
+										<div class="panel-footer">Краткое описание</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<footer class="container-fluid text-center">
+			<p>Интернет магазин, права какието</p>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</body>
+	</html>
