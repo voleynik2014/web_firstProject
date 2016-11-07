@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Шиномонтаж, Автозапчасти, шины новые, б/у, диски, под заказ, Киев, Левобережная, дешево, цены, купить">
+	<title>ShinaServis</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+	<div class="jumbotron">
+		<div class="container text-center">
+			<h1>Online Store</h1>
+			<p>Шины, Диски и тд...</p>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 headar-menu">
+				<nav class="navbar navbar-default">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">WebSiteName</a>
+					</div>
+					<ul class="nav navbar-nav" role="tablist">
+						<li class=""><a href="#">Шиномонтаж</a></li>
+						<li class=""><a href="#">Шины Б/У</a></li>
+						<li class=""><a href="#">Шины Новые</a></li>
+						<li class=""><a href="#">Автозапчасти</a></li>
+						<li class=""><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<div class="container" id="main">
+		<div class="row">
+			<div class="col-md-2 menu">
+				<h3>Меню</h3>
+				<ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+					<li class="active"><a href="#">Шиномонтаж</a></li>
+					<li><a href="#">Шины Б/У</a></li>
+					<li><a href="#">Шины Новые</a></li>
+					<li><a href="#">Автозапчасти</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 content-body">
+					<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">Контакты</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Если у Вас возникли вопросы, вы можете связятся с нами.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Киев, Украина</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +теле</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> test@test.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Имя" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Сообщение" rows="5" style="resize: none;"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="googleMap" style="height:400px;width:100%;"></div>
+
+<!-- Add Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(50.460740, 30.588658);
+
+function initialize() {
+var mapProp = {
+  center:myCenter,
+  zoom:15,
+  scrollwheel:true,
+  draggable:true,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br><br>
+
+	<footer class="container-fluid text-center">
+		<p>Интернет магазин, права какието</p>
+	</footer>
+</body>
+</html>
