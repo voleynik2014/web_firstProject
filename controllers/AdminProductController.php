@@ -96,14 +96,14 @@ class AdminProductController extends AdminBase
             $options['radius'] = $_POST['radius'];
             $options['price'] = $_POST['price'];
 
-            if (Product::updateProductById($id, $options)) {
+//            if (Product::updateProductById($id, $options)) {
+//
+//                if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
+//                    move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/products/{$id}.jpg");
+//                }
+//            }
 
-                if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
-                    move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/products/{$id}.jpg");
-                }
-            }
-
-            header("Location: /admin/product");
+            header("Location: /admin/product/category/available/{$options['category']}");
         }
 
         require_once(ROOT . '/views/admin_product/update.php');
