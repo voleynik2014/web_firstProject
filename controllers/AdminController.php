@@ -14,6 +14,7 @@ class AdminController extends AdminBase
 
     public function actionLogin()
     {
+
         $name = false;
         $password = false;
 
@@ -30,7 +31,7 @@ class AdminController extends AdminBase
             } else {
                 Admin::auth($userId);
 
-                header("Location: /admin/product");
+                header("Location: /admin/index");
             }
         }
 

@@ -2,15 +2,17 @@
 
 return array (
 
-    //Admin
-
-    //Adminproduct
+    //Admin site
+    'admin/product/category/available/([0-9]+)' => 'adminProduct/categoryAvailable/$1',
+    'admin/product/category/custom/([0-9]+)' => 'adminProduct/categoryCustom/$1',
+    'admin/product/contact' => 'adminProduct/contact',
     'admin/product/create' => 'adminProduct/create',
     'admin/product/update/([0-9]+)' => 'adminProduct/update/$1',
     'admin/product/delete/([0-9]+)' => 'adminProduct/delete/$1',
-    'admin/product' => 'adminProduct/index',
 
-    //Admin panel
+    //Admin
+    'admin/contact' => 'adminProduct/contact',
+    'admin/index' => 'adminProduct/index',
     'admin/logout' => 'admin/logout',
     'admin' => 'admin/login',
 

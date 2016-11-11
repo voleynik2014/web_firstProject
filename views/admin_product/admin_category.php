@@ -1,4 +1,4 @@
-<?php include ROOT . '/views/layouts/header.php'; ?>
+<?php include (ROOT. '/views/layouts/admin_header.php'); ?>
 
 
     <div class="container">
@@ -12,6 +12,8 @@
                                     <div class="panel-heading text-center"><?php echo $product['name']; ?></div>
                                     <div class="panel-body"><img src="<?php echo Product::getImage("1"); ?>" class="img-responsive" alt="Image"></div>
                                     <div class="panel-footer"><p></p><?php echo Product::getAvailabilityText($product['availability']); ?></div>
+                                    <a href="/admin/product/update/<?php echo $product['id']; ?>"><button>Изменить</button></a>
+                                    <a href="/admin/product/delete/<?php echo $product['id']; ?>"><button>Удалить</button></a>
                                 </a>
                             </div>
                         </div>
@@ -25,4 +27,4 @@
     </div>
 
 
-<?php include ROOT . '/views/layouts/footer.php'; ?>
+<?php include (ROOT. '/views/layouts/footer.php'); ?>

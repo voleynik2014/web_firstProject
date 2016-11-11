@@ -7,7 +7,7 @@ class Product
     const SHOW_BY_DEFAULT = 12;
 
 
-    public static function getAvailableProductsListByCategory($categoryId, $page = 1)
+    public static function getAvailableProductsListByCategory($category, $page = 1)
     {
 
         $limit = Product::SHOW_BY_DEFAULT;
@@ -18,11 +18,11 @@ class Product
 
         $sql = 'SELECT * FROM product '
             . 'WHERE availability = "1" '
-            . 'AND category_id = :category_id '
+            . 'AND category = :category '
     . 'ORDER BY id ASC LIMIT :limit OFFSET :offset';
 
         $result = $db->prepare($sql);
-        $result->bindParam(':category_id', $categoryId, PDO::PARAM_INT);
+        $result->bindParam(':category', $category, PDO::PARAM_INT);
         $result->bindParam(':limit', $limit, PDO::PARAM_INT);
         $result->bindParam(':offset', $offset, PDO::PARAM_INT);
 
@@ -33,9 +33,10 @@ class Product
         while ($row = $result->fetch()) {
             $products[$i]['id'] = $row['id'];
             $products[$i]['name'] = $row['name'];
+            $products[$i]['category'] = $row['category'];
             $products[$i]['availability'] = $row['availability'];
             $products[$i]['description'] = $row['description'];
-            $products[$i]['season_id'] = $row['season_id'];
+            $products[$i]['season'] = $row['season'];
             $products[$i]['width'] = $row['width'];
             $products[$i]['profile'] = $row['profile'];
             $products[$i]['radius'] = $row['radius'];
@@ -46,7 +47,7 @@ class Product
     }
 
 
-    public static function getCustomProductsListByCategory($categoryId, $page = 1)
+    public static function getCustomProductsListByCategory($category, $page = 1)
     {
 
         $limit = Product::SHOW_BY_DEFAULT;
@@ -57,11 +58,11 @@ class Product
 
         $sql = 'SELECT * FROM product '
             . 'WHERE availability = "0" '
-            . 'AND category_id = :category_id '
+            . 'AND category = :category '
             . 'ORDER BY id ASC LIMIT :limit OFFSET :offset';
 
         $result = $db->prepare($sql);
-        $result->bindParam(':category_id', $categoryId, PDO::PARAM_INT);
+        $result->bindParam(':category', $category, PDO::PARAM_INT);
         $result->bindParam(':limit', $limit, PDO::PARAM_INT);
         $result->bindParam(':offset', $offset, PDO::PARAM_INT);
 
@@ -72,9 +73,10 @@ class Product
         while ($row = $result->fetch()) {
             $products[$i]['id'] = $row['id'];
             $products[$i]['name'] = $row['name'];
+            $products[$i]['category'] = $row['category'];
             $products[$i]['availability'] = $row['availability'];
             $products[$i]['description'] = $row['description'];
-            $products[$i]['season_id'] = $row['season_id'];
+            $products[$i]['season'] = $row['season'];
             $products[$i]['width'] = $row['width'];
             $products[$i]['profile'] = $row['profile'];
             $products[$i]['radius'] = $row['radius'];
@@ -85,15 +87,15 @@ class Product
     }
 
 
-    public static function getTotalAvailableProductsInCategory($categoryId)
+    public static function getTotalAvailableProductsInCategory($category)
     {
 
         $db = Db::getConnection();
 
-        $sql = 'SELECT count(id) AS count FROM product WHERE availability = "1" AND category_id = :category_id';
+        $sql = 'SELECT count(id) AS count FROM product WHERE availability = "1" AND category = :category';
 
         $result = $db->prepare($sql);
-        $result->bindParam(':category_id', $categoryId, PDO::PARAM_INT);
+        $result->bindParam(':category', $category, PDO::PARAM_INT);
 
         $result->execute();
 
@@ -102,15 +104,15 @@ class Product
     }
 
 
-    public static function getTotalCustomProductsInCategory($categoryId)
+    public static function getTotalCustomProductsInCategory($category)
     {
 
         $db = Db::getConnection();
 
-        $sql = 'SELECT count(id) AS count FROM product WHERE availability = "0" AND category_id = :category_id';
+        $sql = 'SELECT count(id) AS count FROM product WHERE availability = "0" AND category = :category';
 
         $result = $db->prepare($sql);
-        $result->bindParam(':category_id', $categoryId, PDO::PARAM_INT);
+        $result->bindParam(':category', $category, PDO::PARAM_INT);
 
         $result->execute();
 
@@ -158,10 +160,10 @@ class Product
         $sql = "UPDATE product
             SET 
                 name = :name, 
-                category_id = :category_id, 
+                category = :category, 
                 availability = :availability, 
                 description = :description,
-                season_id = :season_id,
+                season = :season,
                 width = :width,
                 profile = :profile,
                 radius = :radius,
@@ -171,10 +173,10 @@ class Product
         $result = $db->prepare($sql);
         $result->bindParam(':id', $id, PDO::PARAM_INT);
         $result->bindParam(':name', $options['name'], PDO::PARAM_STR);
-        $result->bindParam(':category_id', $options['category_id'], PDO::PARAM_INT);
+        $result->bindParam(':category', $options['category'], PDO::PARAM_INT);
         $result->bindParam(':availability', $options['availability'], PDO::PARAM_INT);
         $result->bindParam(':description', $options['description'], PDO::PARAM_STR);
-        $result->bindParam(':season_id', $options['season_id'], PDO::PARAM_INT);
+        $result->bindParam(':season', $options['season'], PDO::PARAM_INT);
         $result->bindParam(':width', $options['external_r'], PDO::PARAM_INT);
         $result->bindParam(':profile', $options['profile_r'], PDO::PARAM_INT);
         $result->bindParam(':radius', $options['radius'], PDO::PARAM_INT);

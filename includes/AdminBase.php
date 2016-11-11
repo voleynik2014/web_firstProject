@@ -14,7 +14,7 @@ class AdminBase
             return true;
         }
 
-        die('Access denied');
+        header("Location: /admin/login");
     }
 
 }

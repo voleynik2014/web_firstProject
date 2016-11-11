@@ -7,8 +7,6 @@
     <title>ShinaServis</title>
     <link href="/template/css/bootstrap.min.css" rel="stylesheet">
     <link href="/template/css/style.css" rel="stylesheet">
-    <!-- 	// <script src="js/bootstrap.min.js"></script>
-        // <script type="text/javascript" src="js/jquery.min.js"></script> -->
 </head>
 <body>
 
@@ -23,7 +21,7 @@
                 <li><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Добавить товар</button></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Выйти</a></li>
+                <li><a href="/admin/logout"><span class="glyphicon glyphicon-log-in"></span> Выйти</a></li>
             </ul>
         </div>
 </nav>
@@ -143,11 +141,11 @@
                     <a class="navbar-brand" href="#">WebSiteName</a>
                 </div>
                 <ul class="nav navbar-nav" role="tablist">
-                    <li><a href="/site/index/">Шиномонтаж</a></li>
-                    <li><a href="/category/available/<?php echo Category::getUsedTiresId(); ?>">Шины Б/У</a></li>
-                    <li><a href="/category/available/<?php echo Category::getNewTiresId(); ?>">Шины Новые</a></li>
-                    <li><a href="/category/available/<?php echo Category::getSparePartsId(); ?>">Автозапчасти</a></li>
-                    <li><a href="/site/contact/">Контакты</a></li>
+                    <li><a href="/admin/index/">Шиномонтаж</a></li>
+                    <li><a href="/admin/product/category/<?php echo Category::getUsedTiresId(); ?>">Шины Б/У</a></li>
+                    <li><a href="/admin/product/category/<?php echo Category::getNewTiresId(); ?>">Шины Новые</a></li>
+                    <li><a href="/admin/product/category/<?php echo Category::getSparePartsId(); ?>">Автозапчасти</a></li>
+                    <li><a href="/admin/contact/">Контакты</a></li>
                 </ul>
             </nav>
         </div>
@@ -160,11 +158,11 @@
         <div class="col-md-2 menu">
             <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
                 <h3>Меню</h3>
-                <li class="active"><a href="/site/index/">Шиномонтаж</a></li>
-                <li><a href="/category/available/<?php echo Category::getUsedTiresId(); ?>">Шины Б/У</a></li>
-                <li><a href="/category/available/<?php echo Category::getNewTiresId(); ?>">Шины Новые</a></li>
-                <li><a href="/category/available/<?php echo Category::getSparePartsId(); ?>">Автозапчасти</a></li>
-                <li><a href="/site/contact/">Контакты</a></li>
+                <li class="active"><a href="/admin/index/">Шиномонтаж</a></li>
+                <li><a href="/admin/product/category/available/<?php echo Category::getUsedTiresId(); ?>">Шины Б/У</a></li>
+                <li><a href="/admin/product/category/available/<?php echo Category::getNewTiresId(); ?>">Шины Новые</a></li>
+                <li><a href="/admin/product/category/available/<?php echo Category::getSparePartsId(); ?>">Автозапчасти</a></li>
+                <li><a href="/admin/contact/">Контакты</a></li>
             </ul>
         </div>
         <div class="container">

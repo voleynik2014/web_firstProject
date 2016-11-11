@@ -8,10 +8,8 @@ class CatalogController
     {
         $categoryProducts = Product::getAvailableProductsListByCategory($categoryId, $page);
 
-        // Общее количетсво товаров (необходимо для постраничной навигации)
         $total = Product::getTotalAvailableProductsInCategory($categoryId);
 
-        // Создаем объект Pagination - постраничная навигация
         $pagination = new Pagination($total, $page, Product::SHOW_BY_DEFAULT, 'page-');
 
         require_once(ROOT . '/views/catalog/category.php');
@@ -20,12 +18,10 @@ class CatalogController
 
     public function actionCustom($categoryId, $page = 1)
     {
-        $categoryProducts = Product::getProductsListByCategory($categoryId, $page);
+        $categoryProducts = Product::getCustomProductsListByCategory($categoryId, $page);
 
-        // Общее количетсво товаров (необходимо для постраничной навигации)
         $total = Product::getTotalCustomProductsInCategory($categoryId);
 
-        // Создаем объект Pagination - постраничная навигация
         $pagination = new Pagination($total, $page, Product::SHOW_BY_DEFAULT, 'page-');
 
         require_once(ROOT . '/views/catalog/category.php');
