@@ -165,8 +165,4 @@
                 <li><a href="/admin/contact/">Контакты</a></li>
             </ul>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 content-body">
-                    <div class="row">
 

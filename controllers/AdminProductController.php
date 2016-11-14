@@ -77,6 +77,15 @@ class AdminProductController extends AdminBase
     }
 
 
+    public function actionView($productId)
+    {
+        $product = Product::getProductById($productId);
+
+        require_once(ROOT . '/views/admin_product/admin_view.php');
+        return true;
+    }
+
+
     public function actionUpdate($id)
     {
 

@@ -1,10 +1,9 @@
 <?php include (ROOT. '/views/layouts/admin_header.php'); ?>
 
 
-    <div class="modal-body no-gutter">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-md-12 text-center no-gutter" id="admin_panel" >
+                <div class="col-sm-10 col-md-10 text-center no-gutter" id="admin_panel" >
                     <form enctype="multipart/form-data" method="post">
                         <div class="form-group no-gutter">
 
@@ -81,9 +80,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-</section>
 
 
 <?php include (ROOT. '/views/layouts/footer.php'); ?>
