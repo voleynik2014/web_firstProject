@@ -8,6 +8,15 @@ class AdminProductController extends AdminBase
     {
         self::checkAdmin();
 
+        require_once(ROOT . '/views/admin_product/index.php');
+        return true;
+    }
+
+
+    public function actionCreate()
+    {
+        self::checkAdmin();
+
         if (isset($_POST['submit'])) {
 
             $options['name'] = $_POST['name'];
@@ -29,11 +38,11 @@ class AdminProductController extends AdminBase
 
             Product::createProduct($options);
 
-            header("Location: /admin/product");
+            header("Location: /admin/product/category/available/{$options['category']}");
 
         }
 
-        require_once(ROOT . '/views/admin_product/index.php');
+        require_once(ROOT . '/views/admin_product/create.php');
         return true;
     }
 
