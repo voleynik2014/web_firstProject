@@ -5,6 +5,18 @@
         <div class="row">
             <div class="col-md-10 content-body">
 
+                <?php if ($result): ?>
+                    <p>Сообщение отправлено! Мы ответим Вам на указанный email.</p>
+                <?php else: ?>
+                    <?php if (isset($errors) && is_array($errors)): ?>
+                        <ul>
+                            <?php foreach ($errors as $error): ?>
+                                <li> - <?php echo $error; ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+
+                <?php endif; ?>
 
                 <div id="contact" class="container-fluid bg-grey">
                     <h2 class="text-center">Контакты</h2>
@@ -16,23 +28,26 @@
                             <p><span class="glyphicon glyphicon-envelope"></span> test@test.com</p>
                         </div>
                         <div class="col-sm-7 slideanim">
-                            <div class="row">
-                                <div class="col-sm-6 form-group">
-                                    <input class="form-control" id="name" name="name" placeholder="Имя" type="text" required>
+                            <form method="post">
+                                <div class="row">
+                                    <div class="col-sm-6 form-group">
+                                        <input class="form-control" id="name" name="userName" placeholder="Имя" type="text" required>
+                                    </div>
+                                    <div class="col-sm-6 form-group">
+                                        <input class="form-control" id="email" name="userEmail" placeholder="Email" type="email" required>
+                                    </div>
                                 </div>
-                                <div class="col-sm-6 form-group">
-                                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                                <textarea class="form-control" id="comments" name="userText" placeholder="Сообщение" rows="5" style="resize: none;"></textarea><br>
+                                <div class="row">
+                                    <div class="col-sm-12 form-group">
+                                        <input class="btn btn-default pull-right" name="submit" type="submit" value="Отправить">
+                                    </div>
                                 </div>
-                            </div>
-                            <textarea class="form-control" id="comments" name="comments" placeholder="Сообщение" rows="5" style="resize: none;"></textarea><br>
-                            <div class="row">
-                                <div class="col-sm-12 form-group">
-                                    <button class="btn btn-default pull-right" type="submit">Отправить</button>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
+
 
                 <div id="googleMap" style="height:400px;width:100%;"></div>
 
@@ -52,7 +67,7 @@
                         var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
                         var marker = new google.maps.Marker({
-                            position:myCenter,
+                            position:myCenter
                         });
 
                         marker.setMap(map);

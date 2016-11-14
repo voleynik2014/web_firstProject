@@ -81,6 +81,37 @@ class AdminProductController extends AdminBase
     {
         self::checkAdmin();
 
+        $userEmail = false;
+        $userText = false;
+        $userName = false;
+        $result = false;
+
+        if (isset($_POST['submit'])) {
+            $userEmail = $_POST['userEmail'];
+            $userText = $_POST['userText'];
+            $userName = $_POST['userName'];
+
+            $errors = false;
+
+            if (!Email::checkEmail($userEmail)) {
+                $errors[] = 'Неправильный email';
+            }
+
+            if (!Email::checkName($userName)) {
+                $errors[] = 'Неверное имя';
+            }
+
+            if ($errors == false) {
+
+                $adminEmail = 'skrypka.olek@gmail.com';
+                $message = "Текст: {$userText}. От {$userName} ({$userEmail})";
+                $subject = 'Тема письма';
+                $result = mail($adminEmail, $subject, $message);
+                $result = true;
+            }
+
+        }
+
         require_once (ROOT. '/views/admin_product/admin_contact.php');
         return true;
     }
@@ -137,7 +168,7 @@ class AdminProductController extends AdminBase
         if (isset($_POST['submit'])) {
             Product::deleteProductById($id);
 
-            header("Location: /admin/product");
+            header("Location: /admin/category/available/1");
         }
 
         require_once(ROOT . '/views/admin_product/delete.php');
